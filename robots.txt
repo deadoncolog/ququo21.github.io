@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /order.html
+Sitemap: https://ququoo.com/sitemap.xml
