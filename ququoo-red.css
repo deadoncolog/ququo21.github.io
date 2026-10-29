@@ -1,0 +1,40 @@
+/* QUQUOO palette only: retain the original etccmena structure and dimensions. */
+:root{--theme-color:#ee3854;--theme-dark:#b31e38;--theme-light:#fff0f4}
+body{background-color:#fff7f8}
+.header{background:linear-gradient(115deg,#ee3854,#b31e38);border-bottom-color:#b31e38}
+.logo-icon{background:#fff;color:#b31e38}
+.logo-text,.logo-text span,.header-icon,.header-icon:hover,.desktop-nav-item{color:#fff}
+.desktop-nav-item:hover,.desktop-nav-item.active{background:#ffffff24;color:#fff}
+.hero-section{background:radial-gradient(ellipse at 85% 15%,#ff829655,transparent 55%),linear-gradient(115deg,#ee3854,#b31e38)!important}
+.hero-section .hero-title{background:none!important;color:#fff!important;-webkit-text-fill-color:#fff!important;text-shadow:none}
+.hero-section .hero-desc{color:#ffe9ee!important}
+.logo-icon img{display:block;width:36px;height:36px}.logo-icon{background:#fff!important;overflow:hidden}
+.feature-card{border-color:#ffd9e1}.feature-card i{color:#ee3854}
+.category-link:hover,.category-link.active{background:#ee3854;color:#fff}
+.category-link{background:#fff0f4;color:#a92640}
+.hot-header{border-bottom-color:#f5dbe1}
+.product-buy-row,.buy-link,.btn-buy{background:#ee3854;color:#fff}
+.product-buy-row:hover,.buy-link:hover,.btn-buy:hover{background:#b31e38;color:#fff}
+.product-price-row,.product-price,.recommend-price,.price-value,.total-amount{color:#d52646}
+.product-category-tag{background:#bd3150}
+.product-category-tag.tag-shiming{background:#ce3153}
+.product-category-tag.tag-lao{background:#b31e38}
+.product-category-tag.tag-gudong{background:#973350}
+.product-category-tag.tag-haiwai{background:#d35b76}
+.product-category-tag.tag-bai{background:#b44961}
+.product-category-tag.tag-default{background:#ad5267}
+.quantity-btn:hover{background:#fff0f4;color:#b31e38}
+.email-input:focus,.quantity-input:focus{border-color:#ee3854;outline-color:#ee3854}
+.footer-seo{background:linear-gradient(110deg,#e13252,#b31e38);border-top-color:#b31e38}
+.footer-seo-links,.footer-copyright{color:#ffe1e8}
+.footer-seo a,.footer-seo a:hover{color:#fff}
+.bottom-nav{background:#fff;border-top-color:#f4d6df}
+.bottom-nav .bottom-nav-item,.bottom-nav .bottom-nav-item:visited{color:#8f5362}
+.bottom-nav .bottom-nav-item.active,.bottom-nav .bottom-nav-item:hover{color:#b31e38;background:#fff0f4}
+@media(max-width:768px){
+ .app-container{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+ .bottom-nav{padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));min-height:74px;gap:4px}
+ .bottom-nav .bottom-nav-item{flex:1;min-width:0;padding:8px 4px;line-height:1.25}
+ .bottom-nav .bottom-nav-item i,.bottom-nav .bottom-nav-item span{color:inherit}
+ .footer-seo{line-height:1.85;overflow:visible}
+}

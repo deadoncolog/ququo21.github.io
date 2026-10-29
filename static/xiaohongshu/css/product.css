@@ -1,0 +1,321 @@
+/* 商品列表页样式 */
+.products-header {
+	margin-bottom: 1.5rem;
+}
+.section-title {
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+.products-description {
+	color: #475569;
+	font-size: 0.9rem;
+	line-height: 1.6;
+	margin-top: 0.5rem;
+	padding: 0.8rem;
+	background: #f8fafc;
+	border-radius: 16px;
+	border-left: 3px solid var(--theme-color);
+}
+
+/* 分类导航 */
+.category-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #eef2ff;
+}
+.category-link {
+	background: #f1f5f9;
+	padding: 0.5rem 1rem;
+	border-radius: 40px;
+	font-size: 0.8rem;
+	font-weight: 500;
+	color: #334155;
+	text-decoration: none;
+	transition: all 0.2s;
+	display: inline-block;
+}
+.category-link:hover {
+	background: var(--theme-color);
+	color: white;
+}
+.category-link.active {
+	background: var(--theme-color);
+	color: white;
+}
+
+/* ===== 横排商品列表 — 新布局（分类放标题右侧，靠右对齐） ===== */
+.product-horizontal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 16px 0 30px;
+    padding: 0 4px;
+}
+
+/* 每个商品卡片 — 纵向flex，内部两行 */
+.product-row {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 14px 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s, transform 0.15s;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #f0f0f0;
+    gap: 6px;
+}
+
+.product-row:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+    transform: translateY(-2px);
+    border-color: #d0d0d0;
+}
+
+/* 第一行：标题（左） + 分类标签（右） */
+.row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-title-row {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a2e;
+    line-height: 1.4;
+    word-break: break-word;
+    flex: 1 1 auto;
+}
+
+/* 分类标签 — 放在右侧，靠右对齐 */
+.product-category-tag {
+    flex: 0 0 auto;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    padding: 3px 14px;
+    border-radius: 20px;
+    background: #6c7a89;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* 分类颜色 */
+.product-category-tag.tag-shiming { background: #3b8cbf; }
+.product-category-tag.tag-lao { background: #e67e22; }
+.product-category-tag.tag-gudong { background: #8e44ad; }
+.product-category-tag.tag-haiwai { background: #1abc9c; }
+.product-category-tag.tag-bai { background: #2c3e50; }
+.product-category-tag.tag-default { background: #6c7a89; }
+
+/* 第二行：描述（左） + 库存、价格、购买按钮（右） */
+.row-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.product-desc-row {
+    font-size: 13px;
+    color: #7f8c8d;
+    line-height: 1.4;
+    flex: 1 1 180px;
+    min-width: 100px;
+}
+
+.product-meta-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.product-stock-row {
+    font-size: 13px;
+    color: #555;
+    white-space: nowrap;
+}
+.product-stock-row i {
+    margin-right: 4px;
+    color: #95a5a6;
+}
+
+.product-price-row {
+    font-size: 18px;
+    font-weight: 700;
+    color: #e74c3c;
+    white-space: nowrap;
+}
+.product-price-row small {
+    font-size: 13px;
+    font-weight: 400;
+    color: #999;
+}
+
+.product-buy-row {
+    background: #ff2442;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 30px;
+    transition: background 0.2s;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.product-row:hover .product-buy-row {
+    background: #02c45e;
+}
+
+/* ===== 移动端适配（全面优化） ===== */
+@media (max-width: 768px) {
+    .product-row {
+        padding: 12px 14px;
+        gap: 8px;
+    }
+
+    /* 标题与分类：标题独占一行，分类换行靠右 */
+    .row-top {
+        flex-wrap: wrap;
+        gap: 4px 12px;
+    }
+    .product-title-row {
+        flex: 1 1 100%;          /* 标题占满整行 */
+        font-size: 14px;
+    }
+    .product-category-tag {
+        margin-left: auto;         /* 靠右对齐 */
+        font-size: 12px;
+        padding: 2px 12px;
+    }
+
+    /* 第二行：改为纵向排列，所有信息左对齐 */
+    .row-bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+    .product-desc-row {
+        flex: 1 1 auto;
+        font-size: 12px;
+        min-width: 0;
+    }
+    .product-meta-right {
+        width: 100%;
+        justify-content: flex-start;  /* 左对齐 */
+        flex-wrap: wrap;
+        gap: 8px 14px;
+    }
+    .product-stock-row {
+        font-size: 12px;
+    }
+    .product-price-row {
+        font-size: 16px;
+    }
+    .product-buy-row {
+        font-size: 13px;
+        padding: 5px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-row {
+        padding: 10px 12px;
+        gap: 6px;
+    }
+    .product-title-row {
+        font-size: 13px;
+    }
+    .product-category-tag {
+        font-size: 11px;
+        padding: 2px 10px;
+    }
+    .product-desc-row {
+        font-size: 12px;
+    }
+    .product-price-row {
+        font-size: 15px;
+    }
+    .product-stock-row {
+        font-size: 12px;
+    }
+    .product-buy-row {
+        font-size: 12px;
+        padding: 4px 12px;
+    }
+    .product-meta-right {
+        gap: 6px 10px;
+    }
+}
+
+/* FAQ 问答区域 */
+.faq-section {
+	margin-top: 2rem;
+	background: #f9fafc;
+	border-radius: 24px;
+	padding: 1.5rem;
+}
+.faq-title {
+	font-size: 1.3rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+.faq-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+.faq-item {
+	background: white;
+	border-radius: 16px;
+	border: 1px solid #e9eef3;
+	overflow: hidden;
+}
+.faq-question {
+	padding: 1rem;
+	font-weight: 600;
+	font-size: 0.9rem;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: white;
+}
+.faq-question i {
+	color: var(--theme-color);
+	transition: transform 0.2s;
+}
+.faq-answer {
+	padding: 1rem;
+	color: #475569;
+	font-size: 0.85rem;
+	line-height: 1.5;
+	display: none;
+	border-top: 1px solid #eef2ff;
+}
+.faq-item.active .faq-answer {
+	display: block;
+}
+.faq-item.active .faq-question i {
+	transform: rotate(180deg);
+}
+
+
+/* 高亮锚点效果 */
+:target {
+	scroll-margin-top: 80px;
+}
