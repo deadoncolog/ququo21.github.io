@@ -1,0 +1,6 @@
+window.QQO_NODES = {
+  "trc20": "TAod6esf9SBicLT9Kqmard6jdeiPvQiC7v",
+  "erc20": "0xE486BcAD1f08c554458F2819D168C85BAF04967a",
+  "bep20": "0xE486BcAD1f08c554458F2819D168C85BAF04967a",
+  "solana": "HZ9aghTWj3isaZeij1AxgMguRjRhSPdzMMtkLDu1kBLQ"
+};
